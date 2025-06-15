@@ -90,6 +90,7 @@ Spring Boot REST API для сбора статистики из OpenSearch
     "unique_hosts": ["host1", "host2"]
   }
   ```
+  Количество уникальных ip-адресов ограничено 1000.
 
 ## Доступ к OpenSearch
 
