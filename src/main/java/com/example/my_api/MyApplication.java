@@ -36,7 +36,7 @@ public class MyApplication {
               "aggs": {
                 "avg_battery": { "avg": { "field": "ups_adv_battery_run_time_remaining" } },
                 "max_voltage": { "max": { "field": "ups_adv_output_voltage" } },
-                "unique_hosts": { "terms": { "field": "host", "size": 10 } }
+                "unique_hosts": { "terms": { "field": "host", "size": 1000 } }
               }
             }
         """;
