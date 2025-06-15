@@ -12,14 +12,28 @@ Spring Boot REST API для сбора статистики из OpenSearch
 - Java 24
 - Maven 3.9.9
 - Spring Boot 3.5.0
-- Docker (для запуска через docker-compose)
+- Docker + Docker Compose
+
+## Структура поддерживаемых данных
+
+Данные, которые загружаются в OpenSearch, должны иметь следующую структуру:
+
+```json
+{
+  "ups_adv_output_load": 50,
+  "ups_adv_battery_temperature": 35,
+  "@timestamp": "2024-06-15T12:00:00Z",
+  "host": "host-123",
+  "ups_adv_battery_run_time_remaining": 200,
+  "ups_adv_output_voltage": 230
+}
+```
 
 ## Быстрый старт
 
 1. **Клонируйте репозиторий:**
   ```bash
   git clone <repo-url>
-  cd my-api
   ```
 
 2. **Запустите OpenSearch и API через Docker Compose:**
@@ -76,6 +90,11 @@ Spring Boot REST API для сбора статистики из OpenSearch
     "unique_hosts": ["host1", "host2"]
   }
   ```
+  Количество уникальных ip-адресов ограничено 1000.
+
+## Доступ к OpenSearch
+
+- URL: http://localhost:9200
 
 ## Структура проекта
 
