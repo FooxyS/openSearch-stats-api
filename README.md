@@ -27,7 +27,7 @@ Spring Boot REST API для сбора статистики из OpenSearch
   "ups_adv_battery_run_time_remaining": 200,
   "ups_adv_output_voltage": 230
 }
-
+```
 
 ## Быстрый старт
 
