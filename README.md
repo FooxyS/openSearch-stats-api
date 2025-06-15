@@ -34,7 +34,6 @@ Spring Boot REST API для сбора статистики из OpenSearch
 1. **Клонируйте репозиторий:**
   ```bash
   git clone <repo-url>
-  cd my-api
   ```
 
 2. **Запустите OpenSearch и API через Docker Compose:**
