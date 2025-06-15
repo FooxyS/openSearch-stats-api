@@ -1,0 +1,21 @@
+version: '3'
+services:
+  opensearch:
+    image: opensearchproject/opensearch:latest
+    container_name: opensearch-node
+    environment:
+      - cluster.name=mycluster
+      - discovery.type=single-node
+      - plugins.security.disabled=true
+      - OPENSEARCH_INITIAL_ADMIN_PASSWORD=Super%pass%for%admin123
+    ports:
+      - 9200:9200  # REST API
+      - 9600:9600  # Performance Analyzer
+  api:
+    build: .
+    container_name: myapi
+    depends_on:
+      - opensearch
+    ports:
+      - 8080:8080
+
